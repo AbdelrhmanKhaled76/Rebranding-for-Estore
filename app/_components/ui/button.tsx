@@ -1,14 +1,23 @@
 import { zenLoop } from "@/app/shared/fonts/font";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 interface Props {
   type?: "button" | "submit" | "reset";
-  isFull ?: boolean;
+  isFull?: boolean;
   isPrimary: boolean;
+  value: string;
   onClick: () => void;
 }
 
-const Button = ({ type = "button", isFull = false, isPrimary, onClick }: Props) => {
+const Button = ({
+  type = "button",
+  isFull = false,
+  value,
+  isPrimary,
+  onClick,
+}: Props) => {
   return (
     <button
       type={type}
@@ -23,7 +32,7 @@ const Button = ({ type = "button", isFull = false, isPrimary, onClick }: Props) 
              zenLoop.className
            } capitalize`}
     >
-      explore bags
+      {value}
     </button>
   );
 };

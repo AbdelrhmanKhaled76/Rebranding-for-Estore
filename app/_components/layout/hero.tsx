@@ -6,7 +6,7 @@ import Button from "../ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative">
+    <section id="home" className="relative">
       <Image
         src="/images/hero.jpg"
         alt="a handmade bag"
@@ -27,8 +27,24 @@ const Hero = () => {
           last a lifetime
         </p>
         <div className="mx-auto grid grid-cols-2 gap-4">
-          <Button isPrimary={true} onClick={() => {}} />
-          <Button isPrimary={false} onClick={() => {}} />
+          <Button
+            isPrimary={true}
+            value="explore bags"
+            onClick={() => {
+              document
+                .getElementById("bags")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+          />
+          <Button
+            isPrimary={false}
+            value="view wallets"
+            onClick={() => {
+              document
+                .getElementById("wallets")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+          />
         </div>
       </div>
     </section>

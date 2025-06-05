@@ -1,12 +1,19 @@
+"use client";
 import { spirax, zenLoop } from "@/app/shared/fonts/font";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 const ProductCard = () => {
+  const [openProduct, setOpenProduct] = useState<boolean>(false);
   return (
-    <div className="grid grid-rows-2 rounded-lg bg-[var(--primary-color)] border border-[var(--deep-color)]/50 shadow-md overflow-hidden cursor-pointer transition-transform duration-500 hover:-translate-y-2 hover:shadow-lg group">
+    <div
+      onClick={() => {
+        setOpenProduct(true);
+      }}
+      className="grid grid-rows-2 rounded-lg bg-[var(--primary-color)] border border-[var(--deep-color)]/50 shadow-md overflow-hidden cursor-pointer transition-transform duration-500 hover:-translate-y-2 hover:shadow-lg group"
+    >
       <figure className="overflow-hidden relative">
         <Image
           src={"/images/wallet-1.jpg"}
@@ -26,7 +33,7 @@ const ProductCard = () => {
           <h3 className={`${spirax.className} text-2xl text-black/60`}>
             Rustic Leather Tote
           </h3>
-          <span className={`font-sans text-xl font-bold text-brown`}>
+          <span className={`${zenLoop.className} text-xl font-bold text-brown`}>
             $189.99
           </span>
         </div>

@@ -34,38 +34,37 @@ const Nav = () => {
             alt="logo"
             width={80}
             height={80}
-            className=""
           />
         </figure>
         <ul className="flex justify-between items-center gap-9">
           <li
             className={`${zenLoop.className} capitalize text-xl text-[var(--primary-color)] hover:text-[var(--deep-color)] transition-all duration-500 relative under`}
           >
-            <a href="#">home</a>
+            <a href="#home">home</a>
           </li>
           <li
             className={`${zenLoop.className} capitalize text-xl text-[var(--primary-color)] hover:text-[var(--deep-color)] transition-all duration-500 relative under`}
           >
             {" "}
-            <a href="">bags</a>
+            <a href="#bags">bags</a>
           </li>
           <li
             className={`${zenLoop.className} capitalize text-xl text-[var(--primary-color)] hover:text-[var(--deep-color)] transition-all duration-500 relative under`}
           >
             {" "}
-            <a href="">wallets</a>
+            <a href="#wallets">wallets</a>
           </li>
           <li
             className={`${zenLoop.className} capitalize text-xl text-[var(--primary-color)] hover:text-[var(--deep-color)] transition-all duration-500 relative under`}
           >
             {" "}
-            <a href="">about</a>
+            <a href="#about">about</a>
           </li>
           <li
             className={`${zenLoop.className} capitalize text-xl text-[var(--primary-color)] hover:text-[var(--deep-color)] transition-all duration-500 relative under`}
           >
             {" "}
-            <a href="">contact</a>
+            <a href="#contact">contact</a>
           </li>
           <li
             className={`${zenLoop.className} capitalize text-xl text-[var(--primary-color)] hover:text-[var(--deep-color)] transition-all duration-500`}
