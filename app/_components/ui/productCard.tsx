@@ -1,14 +1,20 @@
 "use client";
+import { ProductContext } from "@/app/_contexts/productProvider";
 import { spirax, zenLoop } from "@/app/shared/fonts/font";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useContext } from "react";
 
 const ProductCard = () => {
-  const [openProduct, setOpenProduct] = useState<boolean>(false);
+  const product = useContext(ProductContext);
+  if (!product) {
+    return null;
+  }
+  const [openProduct, setOpenProduct] = product;
   return (
     <div
+      tabIndex={-1}
       onClick={() => {
         setOpenProduct(true);
       }}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "./_components/layout/nav";
 import Footer from "./_components/layout/footer";
+import ProductProvider from "./_contexts/productProvider";
 
 export const metadata: Metadata = {
   title: "Alaa Khaled design",
@@ -20,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased relative overflow-x-hidden`}>
         <Nav />
-        {children}
+        <ProductProvider>{children}</ProductProvider>
         <Footer />
       </body>
     </html>
