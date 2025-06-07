@@ -4,7 +4,7 @@ import ProductCard from "../ui/productCard";
 
 const Bags = () => {
   return (
-    <section id="bags" className="min-h-screen bg-[var(--primary-color)] py-5">
+    <section id="bags" className="min-h-fit bg-[var(--primary-color)] py-5">
       <h2
         className={`py-7 text-center ${spirax.className} text-5xl capitalize text-black/60`}
       >

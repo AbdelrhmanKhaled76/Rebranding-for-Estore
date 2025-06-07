@@ -4,7 +4,7 @@ import NormalCard from "../ui/normalCard";
 
 const Process = () => {
   return (
-    <section className="min-h-screen bg-[var(--secondary-color)] py-5">
+    <section className="min-h-fit bg-[var(--secondary-color)] py-5">
       <h2
         className={`py-7 text-center ${spirax.className} text-5xl capitalize text-black/60`}
       >
